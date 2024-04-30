@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <ImageView
+        android:id="@+id/iv_settings"
+        android:layout_width="41dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_settings_24" />
+
+    <TextView
+        android:id="@+id/tv_Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Home"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+        android:id="@+id/bird_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="400dp"
+        android:layout_height="346dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Home"
+        tools:context=".MapsActivity" />
+
+    <Button
+        android:id="@+id/btn_AddBird"
+        android:layout_width="150dp"
+        android:layout_height="56dp"
+        android:text="Add Sighting"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bird_map"
+        app:layout_constraintVertical_bias="0.504" />
+
+    <Button
+        android:id="@+id/btn_ViewSightings"
+        android:layout_width="147dp"
+        android:layout_height="56dp"
+        android:text="View Sightings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bird_map" />
+
+    <TextView
+        android:id="@+id/tv_Goal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_Collector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Home" />
+
+    <ProgressBar
+        android:id="@+id/pb_Goal1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="100dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/bird_map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Home"
+        app:layout_constraintVertical_bias="0.83" />
+
+    <ProgressBar
+        android:id="@+id/pb_Goal"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="100dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/bird_map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Home"
+        app:layout_constraintVertical_bias="0.83" />
+
+    <ProgressBar
+        android:id="@+id/pb_Goal2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="100dp"
+        android:layout_height="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/bird_map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.983"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Home"
+        app:layout_constraintVertical_bias="0.83" />
+
+    <TextView
+        android:id="@+id/tv_Starter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Starter :"
+        app:layout_constraintBottom_toTopOf="@+id/pb_Goal"
+        app:layout_constraintEnd_toStartOf="@+id/tv_Packrat"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Collector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Collector :"
+        app:layout_constraintBottom_toTopOf="@+id/pb_Goal1"
+        app:layout_constraintEnd_toStartOf="@+id/tv_Packrat"
+        app:layout_constraintStart_toEndOf="@+id/tv_Starter" />
+
+    <TextView
+        android:id="@+id/tv_Packrat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="Packrat :"
+        app:layout_constraintBottom_toTopOf="@+id/pb_Goal2"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

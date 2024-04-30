@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <ImageView
+        android:id="@+id/iv_Home"
+        android:layout_width="41dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_home_24" />
+
+    <TextView
+        android:id="@+id/tv_Settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Settings"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/sw_Metric"
+        android:layout_width="170dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="150dp"
+        android:text="Metric :"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Maxiumum Distance :"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/sb_Distance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sw_Metric" />
+
+    <SeekBar
+        android:id="@+id/sb_Distance"
+        android:layout_width="198dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sw_Metric" />
+
+    <TextView
+        android:id="@+id/tv_DistanceView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sb_Distance" />
+
+    <TextView
+        android:id="@+id/tv_DistanceUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:text="miles"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_DistanceView"
+        app:layout_constraintTop_toBottomOf="@+id/sb_Distance" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
